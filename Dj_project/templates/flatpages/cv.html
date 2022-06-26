@@ -1,0 +1,60 @@
+
+{% extends 'flatpages/default.html' %}
+{% load static %}
+{% block title %}
+{{flatpage.title}}
+{% endblock title %}
+
+
+{% block content %}
+{{flatpage.content}}
+<section class="services-section">
+                <h6 class="section-subtitle">WHAT I DO</h6>
+                <h2 class="section-title">Skills</h2>
+                <div class="row">
+                    <div class="media service-card col-lg-6">
+                        <div class="service-icon">
+                            <img src="{% static 'assets/images/001-target.svg' %}" alt="target">
+                        </div>
+                        <div class="media-body">
+                            <h5 class="service-title">My skills</h5>
+                            <ul class="service-description">
+                                <li>Python</li>
+                                <li>Django</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="media service-card col-lg-6">
+                        <div class="service-icon">
+                            <img src="{% static 'assets/images/003-idea.svg' %}" alt="bulb">
+                        </div>
+                        <div class="media-body">
+                            <h5 class="service-title">Languages</h5>
+                            <ul class="service-description">
+                                <li>Russian: native</li>
+                                <li>English: upper-intermediate</li>
+                                <li>Spanish: beginner</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="media service-card col-lg-6">
+                        <div class="service-icon">
+                            <img src="{% static 'assets/images/002-development.svg' %}" alt="development">
+                        </div>
+                        <div class="media-body">
+                            <h5 class="service-title">Tools</h5>
+                            <ul class="service-description">
+                                <li>Pycharm</li>
+                                <li>Visual Studio Code</li>
+                                <li>Git/ GitHub</li>
+                                <li>Figma</li>
+                            </ul>
+                        </div>
+                    </div>
+</section>
+
+{% endblock content %}
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %} {% endblock title %}</title>
+
+    {% load static %}
+
+    <link href="{% static 'https://fonts.googleapis.com/css?family=Mukta:300,400,500,600,700&display=swap" rel="stylesheet' %}">
+    <link rel="stylesheet" href="{% static 'assets/vendors/@fortawesome/fontawesome-free/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/live-resume.css' %}">
+</head>
+
+<body>
+    <header>
+        <button class="btn btn-white btn-share ml-auto mr-3 ml-md-0 mr-md-auto"><img src="{% static 'assets/images/share.svg' %}" alt="share" class="btn-img">
+            SHARE</button>
+        <nav class="collapsible-nav" id="collapsible-nav">
+            <a href="../cv/" class="nav-link active">HOME</a>
+            <a href="https://github.com/Tandrina?tab=repositories" class="nav-link">PROJECTS</a>
+            <a href="../about/" class="nav-link">ABOUT ME</a>
+            <a href="../code/" class="nav-link">CODE</a>
+        </nav>
+        <button class="btn btn-menu-toggle btn-white rounded-circle" data-toggle="collapsible-nav"
+            data-target="collapsible-nav"><img src="{% static 'assets/images/hamburger.svg'%}" alt="hamburger"></button>
+    </header>
+    <div class="content-wrapper">
+<!--Aside menu content-->
+        <aside>
+            <div class="profile-img-wrapper">
+                <img src="{% static 'assets/images/Profile.png' %}" alt="profile">
+            </div>
+            <h1 class="profile-name">Kudashova Tatiana</h1>
+            <div class="text-center">
+                <span class="badge badge-white badge-pill profile-designation">Full Stack dev junior</span>
+            </div>
+            <nav class="social-links">
+                <a href="#!" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#!" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#!" class="social-link"><i class="fab fa-behance"></i></a>
+                <a href="#!" class="social-link"><i class="fab fa-dribbble"></i></a>
+                <a href="https://github.com/Tandrina?tab=repositories" class="social-link"><i class="fab fa-github"></i></a>
+            </nav>
+            <div class="widget">
+                <h5 class="widget-title">personal information</h5>
+                <div class="widget-content">
+                    <p>Location: Moscow, Russia</p>
+                    <p>Tel. + (905) 733-1010</p>
+                    <p>E-mail: tandrin.mail@gmail.com</p>
+                    <p>Discord: @Tandrini</p>
+                    <p>GitHub: @Tandrina</p>
+                    <button class="btn btn-download-cv btn-primary rounded-pill"> <img src="{% static 'assets/images/download.svg' %}" alt="Write me"
+                        class="btn-img">Contacts </button>
+
+                </div>
+            </div>
+
+        </aside>
+
+<!--Page content-->
+        <main>
+            {% block content %}
+            <img src="{% static 'assets/images/001-target.svg' %}" alt="target">
+            {% endblock content %}
+            <footer>My CV <a href="https://www.bootstrapdash.com" target="_blank" rel="noopener noreferrer">BootstrapDash</a>. All Rights Reserved 2020</footer>
+        </main>
+    </div>
+    <script src="{% static 'assets/vendors/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/@popperjs/core/dist/umd/popper-base.min.js' %}"></script>
+    <script src="{% static 'assets/vendors/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/live-resume.js' %}"></script>
+
+</body>
+
+</html>
